@@ -6,8 +6,6 @@ An interactive, engaging web-based bingo game that captures the quintessential c
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/nirnit-13/College-Life-Bingo)
 
-![College Life Bingo Screenshot](screenshot.png)
-
 ## ✨ Features
 
 ### 🎮 Interactive Gameplay
