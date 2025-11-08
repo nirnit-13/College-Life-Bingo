@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Life Bingo - Ultimate Student Experience</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="bg-container">
+        <div class="bg-animated"></div>
+    </div>
+
+    <!-- Sound Toggle Button -->
+    <button id="sound-toggle" class="sound-toggle" onclick="toggleSound(); playClickSound();" title="Toggle Sound">
+        🔊
+    </button>
+
+    <!-- Audio Elements -->
+    <audio id="background-music" loop autoplay>
+        <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+        <!-- Fallback for browsers that don't support the audio element -->
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Sound Effects -->
+    <audio id="click-sound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+TyvmMcBzuZ2fPBfC8ELIjN8tOLQAkZaLvt6aVUEgxPquX1um4gBjiQ2e/Nez0FLIjM8tyMQQkZaLnu6qNWFAxOpuTzwWccBzmU2PDBfz8GMI7P8teNPwkZaLvt6qNXFAxPqOT2vGkmBzeR2fDKfT4GMo7R8t2NQgkZaLvt6qNXFAxPp+T1vmcnBzqU2fHAfT4FMo/R8t2MQQkYaLvu6qNVEwxPp+X1vWcnBziS2fDKfz8FMY7Q8t2PQAkZaLvs6aVXEwxQp+T2u2ojBzqU2e/MfT0GM47P8t6OQgkWaLzu5qVWFgxOp+PzwWccBz2S2fDKfT4FMo7P8t6OPwkZabbr6qNWEwxPpuP2vGgoB" type="audio/wav">
+    </audio>
+    
+    <audio id="bingo-sound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRqQEAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YYAEAAD//v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+" type="audio/wav">
+    </audio>
+
+    <!-- Welcome Page -->
+    <div class="page active" id="welcome-page">
+        <div class="container">
+            <div class="welcome-wrapper">
+                <div class="welcome-logo">🎓 College Life Bingo</div>
+                <div class="welcome-content">
+                    <div class="welcome-description">
+                        Welcome to the most relatable college experience ever created! 🎉
+                        <br><br>
+                        From surviving on instant ramen to pulling those legendary all-nighters, from awkward dorm encounters to the sweet victory of acing that impossible exam – we've captured EVERY moment that defines the real college journey.
+                        <br><br>
+                        Whether you're a stressed freshman figuring out laundry or a seasoned senior counting down to graduation, this game will hit you right in the feels with memories you'll recognize instantly!
+                    </div>
+                    
+                    <div class="feature-highlights">
+                        <div class="feature-item">
+                            <div>📚 Real College Experiences</div>
+                        </div>
+                        <div class="feature-item">
+                            <div>🎯 Multiple Difficulty Levels</div>
+                        </div>
+                        <div class="feature-item">
+                            <div>🎨 Beautiful Themes</div>
+                        </div>
+                        <div class="feature-item">
+                            <div>📱 Share Your Victory</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="primary-btn" onclick="navigateToSettings(); playClickSound();">
+                    🚀 Start Your Journey
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Page -->
+    <div class="page" id="settings-page">
+        <div class="container">
+            <div class="settings-wrapper">
+                <div class="settings-panel">
+                    <!-- Back Button -->
+                    <button class="back-btn" onclick="navigateToWelcome(); playClickSound();">
+                        ← Back to Home
+                    </button>
+                    
+                    <h2 class="settings-title">🎮 Game Setup</h2>
+                    
+                    <div class="setting-section">
+                        <label class="setting-label">Choose Your Vibe 🎨</label>
+                        <div class="option-grid">
+                            <button class="option-button selected" data-theme="light" onclick="playClickSound();">
+                                ✨ Vibrant Energy
+                            </button>
+                            <button class="option-button" data-theme="dark" onclick="playClickSound();">
+                                🌙 Night Owl
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-section">
+                        <label class="setting-label">Pick Your College Stage 🎓</label>
+                        <div class="option-grid">
+                            <button class="option-button selected" data-difficulty="freshman" onclick="playClickSound();">
+                                🎒 Freshman Feels
+                            </button>
+                            <button class="option-button" data-difficulty="sophomore" onclick="playClickSound();">
+                                📚 Sophomore Struggles
+                            </button>
+                            <button class="option-button" data-difficulty="senior" onclick="playClickSound();">
+                                👨‍🎓 Senior Syndrome
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button class="primary-btn" onclick="startGameSession(); playClickSound();" style="margin-top: 2rem;">
+                        🎯 Let's Play Bingo!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Page -->
+    <div class="page" id="game-page">
+        <div class="container">
+            <div class="game-wrapper">
+                <!-- Back Button for Game Page -->
+                <button class="back-btn game-back-btn" onclick="navigateToSettings(); playClickSound();">
+                    ← Back to Settings
+                </button>
+                
+                <div class="game-header">
+                    <h1 class="game-title">College Life Bingo</h1>
+                    <div class="difficulty-badge" id="current-difficulty">
+                        Freshman Feels
+                    </div>
+                </div>
+                
+                <!-- Floating Instructions Window -->
+                <div class="floating-instructions" id="floating-instructions">
+                    <div class="instructions-header">
+                        <span class="instructions-title">❓ How to Play College Life Bingo</span>
+                        <button class="close-instructions" onclick="hideFloatingInstructions(); playClickSound();">×</button>
+                    </div>
+                    <div class="instructions-content">
+                        <div class="instruction-step">
+                            <div class="step-number">1</div>
+                            <div class="step-description">
+                                <strong>Click on experiences you've had:</strong> Look through the bingo board and click on any college experiences that you've actually lived through. Each clicked cell will turn red and count toward your victory!
+                            </div>
+                        </div>
+                        <div class="instruction-step">
+                            <div class="step-number">2</div>
+                            <div class="step-description">
+                                <strong>Complete a line:</strong> Try to get 5 experiences in a row - this can be horizontal, vertical, or diagonal. Remember, the center "BINGO!" square is always FREE!
+                            </div>
+                        </div>
+                        <div class="instruction-step">
+                            <div class="step-number">3</div>
+                            <div class="step-description">
+                                <strong>Watch for the flash:</strong> When you complete a valid line, the center BINGO button will start flashing with colorful animations to let you know you've won!
+                            </div>
+                        </div>
+                        <div class="instruction-step">
+                            <div class="step-number">4</div>
+                            <div class="step-description">
+                                <strong>Claim your victory:</strong> Click the flashing center BINGO button to celebrate your win and share your college memories with friends!
+                            </div>
+                        </div>
+                        <div class="pro-tip">
+                            <div class="tip-icon">💡</div>
+                            <div class="tip-text">
+                                <strong>Pro Tip:</strong> The center BINGO tile is always considered "completed" and counts for any line that passes through it. This gives you more chances to win!
+                            </div>
+                        </div>
+                        <div class="game-goal">
+                            <div class="goal-text">
+                                <strong>🎯 Goal:</strong> Relive your college memories and see how much of the "typical" college experience you've actually had. Share your results and compare with friends!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bingo-container">
+                    <div class="bingo-grid" id="bingo-board">
+                        <!-- Grid cells will be generated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="game-controls">
+                    <button class="control-btn" onclick="resetCurrentGame(); playClickSound();">
+                        🔄 New Game
+                    </button>
+                    <button class="control-btn" onclick="navigateToSettings(); playClickSound();">
+                        ⚙️ Settings
+                    </button>
+                    <button class="control-btn" onclick="showFloatingInstructions(); playClickSound();">
+                        ❓ How to Play
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Win Celebration Modal -->
+    <div class="modal-overlay" id="victory-modal">
+        <div class="modal-content">
+            <div class="modal-title">🎉 BINGO ACHIEVED! 🎉</div>
+            <div class="modal-text">
+                Congratulations! You've successfully experienced the true essence of college life! 
+                Your bingo board tells the story of your incredible journey through academia.
+                Share this moment with fellow students who'll totally get it! 📚✨
+            </div>
+            
+            <div class="share-section">
+                <h3 class="share-title">📱 Share Your Victory</h3>
+                <div class="share-grid">
+                    <button class="share-button share-whatsapp" onclick="shareViaWhatsApp(); playClickSound();">
+                        📱 WhatsApp
+                    </button>
+                    <button class="share-button share-instagram" onclick="shareViaInstagram(); playClickSound();">
+                        📸 Instagram
+                    </button>
+                    <button class="share-button share-twitter" onclick="shareViaTwitter(); playClickSound();">
+                        🐦 Twitter
+                    </button>
+                    <button class="share-button share-download" onclick="downloadBingoBoard(); playClickSound();">
+                        💾 Download
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="action-btn primary-action" onclick="resetCurrentGame(); closeVictoryModal(); playClickSound();">
+                    🎮 Start New Game
+                </button>
+                <button class="action-btn secondary-action" onclick="navigateToSettings(); closeVictoryModal(); playClickSound();">
+                    ⚙️ Return to Settings
+                </button>
+                <button class="action-btn continue-action" onclick="closeVictoryModal(); playClickSound();">
+                    ✨ Keep Playing
+                </button>
+                <button class="action-btn exit-action" onclick="navigateToWelcome(); closeVictoryModal(); playClickSound();">
+                    🏠 Exit to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/data.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/sharing.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

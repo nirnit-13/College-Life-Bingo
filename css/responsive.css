@@ -1,0 +1,641 @@
+/* Responsive Design Styles - Updated with hidden scrollbars and navigation */
+
+/* Global scrollbar hiding for all responsive breakpoints */
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .welcome-logo {
+        font-size: 5rem;
+    }
+    
+    .bingo-grid {
+        max-width: 700px;
+        gap: 15px;
+    }
+    
+    .bingo-cell {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    /* Larger floating instructions on big screens */
+    .floating-instructions {
+        max-width: 700px;
+        top: 160px;
+    }
+    
+    /* Modal actions grid for large screens */
+    .modal-actions {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Desktop (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .welcome-content {
+        padding: 3rem;
+    }
+    
+    .settings-panel {
+        padding: 4rem;
+    }
+    
+    .floating-instructions {
+        max-width: 650px;
+    }
+    
+    .modal-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .welcome-logo {
+        font-size: 4rem;
+    }
+    
+    .welcome-content {
+        padding: 2.5rem;
+        margin: 2rem 1rem;
+    }
+    
+    .settings-panel {
+        padding: 3rem;
+        margin: 2rem 1rem;
+    }
+    
+    .bingo-grid {
+        max-width: 500px;
+    }
+    
+    .feature-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .option-grid {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .option-button {
+        min-width: 140px;
+    }
+    
+    /* Back button adjustments for tablet */
+    .back-btn {
+        top: 15px;
+        left: 15px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    /* Floating instructions adjustments for tablet */
+    .floating-instructions {
+        max-width: 96%;
+        padding: 1.25rem;
+        top: 160px;
+        max-height: 70vh;
+    }
+    
+    /* Modal adjustments for tablet */
+    .modal-content {
+        padding: 2rem;
+        max-width: 90%;
+    }
+    
+    .modal-actions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    
+    .action-btn {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile Large (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .welcome-logo {
+        font-size: 3.5rem;
+    }
+    
+    .welcome-content {
+        padding: 2rem;
+        margin: 1.5rem;
+    }
+    
+    .settings-panel {
+        padding: 2.5rem;
+        margin: 1.5rem;
+    }
+    
+    .bingo-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .bingo-grid {
+        max-width: 400px;
+        gap: 10px;
+    }
+    
+    .bingo-cell {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+    
+    .feature-highlights {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .game-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .control-btn {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    /* Back button for mobile large */
+    .back-btn {
+        top: 12px;
+        left: 12px;
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+    
+    /* Mobile large floating instructions */
+    .floating-instructions {
+        max-width: 96%;
+        padding: 1.25rem;
+        top: 140px;
+        max-height: 70vh;
+        font-size: 0.9rem;
+    }
+    
+    .instructions-title {
+        font-size: 1rem;
+    }
+    
+    .step-description,
+    .tip-text,
+    .goal-text {
+        font-size: 0.8rem;
+    }
+    
+    .step-number {
+        width: 26px;
+        height: 26px;
+        font-size: 0.8rem;
+    }
+    
+    /* Modal for mobile large */
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .modal-title {
+        font-size: 2.2rem;
+    }
+    
+    .modal-actions {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .share-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (up to 575px) */
+@media (max-width: 575px) {
+    .page {
+        padding: 15px;
+    }
+    
+    .welcome-logo {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .welcome-content {
+        padding: 1.5rem;
+        margin: 1rem;
+        border-radius: 20px;
+    }
+    
+    .welcome-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .feature-highlights {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        margin: 1.5rem 0;
+    }
+    
+    .feature-item {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .primary-btn {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .settings-panel {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+        border-radius: 25px;
+    }
+    
+    .settings-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .setting-section {
+        margin-bottom: 2rem;
+    }
+    
+    .setting-label {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .option-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .option-button {
+        min-width: 200px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .game-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .game-title {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .difficulty-badge {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .bingo-container {
+        padding: 1rem;
+        margin: 0.5rem;
+        border-radius: 20px;
+    }
+    
+    .bingo-grid {
+        max-width: 320px;
+        gap: 8px;
+    }
+    
+    .bingo-cell {
+        font-size: 0.7rem;
+        padding: 6px;
+        border-radius: 12px;
+    }
+    
+    .bingo-cell.center {
+        font-size: 0.9rem;
+    }
+    
+    .game-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+    
+    .control-btn {
+        min-width: 200px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Back button for mobile */
+    .back-btn {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 1rem;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        align-self: flex-start;
+    }
+    
+    .game-back-btn {
+        margin-bottom: 1rem;
+    }
+    
+    /* Mobile floating instructions - larger and more readable */
+    .floating-instructions {
+        max-width: 98%;
+        padding: 1.25rem;
+        top: 120px;
+        max-height: 75vh;
+        font-size: 0.9rem;
+    }
+    
+    .instructions-title {
+        font-size: 1rem;
+    }
+    
+    .step-description,
+    .tip-text,
+    .goal-text {
+        font-size: 0.8rem;
+    }
+    
+    .step-number {
+        width: 26px;
+        height: 26px;
+        font-size: 0.8rem;
+    }
+    
+    /* Mobile modal improvements */
+    .modal-content {
+        padding: 1.5rem 1.25rem;
+        margin: 0.5rem;
+        border-radius: 20px;
+    }
+    
+    .modal-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .share-section {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+    
+    .share-title {
+        font-size: 1.1rem;
+    }
+    
+    .share-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    
+    .share-button {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .modal-actions {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+    
+    .action-btn {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+        min-height: 45px;
+    }
+}
+
+/* Extra Small Mobile (up to 400px) */
+@media (max-width: 400px) {
+    .welcome-logo {
+        font-size: 2.5rem;
+    }
+    
+    .welcome-content {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+    
+    .welcome-description {
+        font-size: 0.9rem;
+    }
+    
+    .primary-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .settings-panel {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem;
+    }
+    
+    .settings-title {
+        font-size: 1.8rem;
+    }
+    
+    .bingo-container {
+        padding: 0.8rem;
+        margin: 0.3rem;
+    }
+    
+    .bingo-grid {
+        max-width: 280px;
+        gap: 6px;
+    }
+    
+    .bingo-cell {
+        font-size: 0.6rem;
+        padding: 4px;
+    }
+    
+    .bingo-cell.center {
+        font-size: 0.8rem;
+    }
+    
+    /* Back button for extra small mobile */
+    .back-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    /* Extra small mobile floating instructions */
+    .floating-instructions {
+        max-width: 98%;
+        padding: 1rem;
+        top: 100px;
+        max-height: 80vh;
+        font-size: 0.85rem;
+    }
+    
+    .instructions-title {
+        font-size: 0.9rem;
+    }
+    
+    .step-description,
+    .tip-text,
+    .goal-text {
+        font-size: 0.75rem;
+    }
+    
+    .step-number {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+    
+    /* Extra small modal */
+    .modal-content {
+        padding: 1.25rem 1rem;
+        margin: 0.25rem;
+    }
+    
+    .modal-title {
+        font-size: 1.8rem;
+    }
+    
+    .modal-text {
+        font-size: 0.9rem;
+    }
+    
+    .action-btn {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+        min-height: 40px;
+    }
+}
+
+/* Landscape Orientation Adjustments */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    .welcome-wrapper {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .settings-wrapper {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .game-wrapper {
+        padding-top: 1rem;
+        min-height: auto;
+    }
+    
+    .welcome-logo {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .welcome-content {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .bingo-container {
+        margin-bottom: 1rem;
+    }
+    
+    /* Back button in landscape */
+    .back-btn {
+        top: 10px;
+        left: 10px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    /* Floating instructions in landscape */
+    .floating-instructions {
+        max-height: 85vh;
+        top: 80px;
+    }
+    
+    /* Modal in landscape */
+    .modal-content {
+        max-height: 85vh;
+        padding: 2rem;
+    }
+    
+    .modal-actions {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .bg-container,
+    .game-controls,
+    .primary-btn,
+    .control-btn,
+    .floating-instructions,
+    .back-btn,
+    .modal-overlay {
+        display: none !important;
+    }
+    
+    .page {
+        page-break-inside: avoid;
+    }
+    
+    .bingo-grid {
+        border: 2px solid #000;
+        background: #fff;
+    }
+    
+    .bingo-cell {
+        border: 1px solid #000;
+        background: #fff;
+        color: #000;
+    }
+    
+    .bingo-cell.selected {
+        background: #ccc !important;
+    }
+    
+    .bingo-cell.center {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+    }
+}
